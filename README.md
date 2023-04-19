@@ -579,7 +579,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { Result } from './types'
 import { useUserStore } from '/@/store/modules/user'
 
-class HYRequest {
+class ZXRequest {
   private instance: AxiosInstance
 
   private readonly options: AxiosRequestConfig
@@ -645,7 +645,7 @@ class HYRequest {
   }
 }
 
-export default HYRequest
+export default ZXRequest
 ```
 
 
@@ -695,3 +695,8 @@ export default HYRequest
   }
 }
 ```
+
+## 三、vue3-ts-cms文件
+
+vue3-ts-cms文件是初始版本封装了axios等等 可以直接使用
+
