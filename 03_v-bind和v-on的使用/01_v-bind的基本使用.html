@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- vue2 template模板中只能有一个根元素 -->
+    <!-- vue3 是允许template 中有多个元素 -->
+    <template id="my-app">
+      <a :href="url">百度</a>
+      <img v-bind:src="img" alt="" />
+    </template>
+
+    <script src="../vue3源码//vue3.js"></script>
+
+    <script>
+      const App = {
+        template: "#my-app",
+        data() {
+          return {
+            url: "https://www.baidu.com",
+            img: "",
+          };
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>

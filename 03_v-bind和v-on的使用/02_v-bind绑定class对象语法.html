@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <template id="my-app">
+      <div :class="className">{{msg}}</div>
+      <!-- 对象语法：{'active':boolean} -->
+      <div :class="{'active':isActive}">呵呵呵呵</div>
+      <!-- 多个键值对 -->
+      <div :class="{'active':isActive, 'title':true}">呵呵呵呵</div>
+      <!-- 默认的class和动态的class结合 -->
+      <div class="abc aaa" :class="{'active':isActive, 'title':true}">
+        呵呵呵呵
+      </div>
+      <button @click="changeClick">切换</button>
+    </template>
+
+    <script src="../vue3源码//vue3.js"></script>
+
+    <script>
+      const App = {
+        template: "#my-app",
+        data() {
+          return {
+            msg: "123123",
+            className: "why",
+            isActive: true,
+          };
+        },
+        methods: {
+          changeClick() {
+            this.isActive = !this.isActive;
+          },
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>

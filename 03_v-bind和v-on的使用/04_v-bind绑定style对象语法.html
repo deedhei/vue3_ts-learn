@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <template id="my-app">
+      <div :style="{color:finalColor}">{{msg}}</div>
+      <div :style="{color:finalColor,fontSize:finalFontSize+'px'}">{{msg}}</div>
+
+      <!-- 绑定一个data中的属性值，并且是一个对象 -->
+      <div :style="finaleObj">hehehehhe</div>
+      <!-- 方法 -->
+      <div :style="getStyle()">hehehehhe</div>
+    </template>
+
+    <script src="../vue3源码//vue3.js"></script>
+
+    <script>
+      const App = {
+        template: "#my-app",
+        data() {
+          return {
+            msg: "123123",
+            finalColor: "red",
+            finalFontSize: "29",
+            finaleObj: {
+              "font-size": "50px",
+              fontWeight: 700,
+            },
+          };
+        },
+        methods: {
+          getStyle() {
+            return {
+              "font-size": "50px",
+              fontWeight: 700,
+            };
+          },
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>

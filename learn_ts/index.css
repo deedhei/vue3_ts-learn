@@ -1,0 +1,57 @@
+#site_nav_under {
+  display: none;
+}
+.c_ad_block,
+.ad_text_commentbox {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+#ad_under_google {
+  height: 0;
+  overflow: hidden;
+}
+#ad_under_google a {
+  display: none;
+}
+#home {
+  margin: 0 auto;
+  width: 65%;
+  min-width: 950px;
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+#blogTitle {
+  height: 60px;
+  clear: both;
+}
+#navigator {
+  font-size: 13px;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+  height: 50px;
+  clear: both;
+  margin-top: 25px;
+}
+#blogTitle h2 {
+  font-weight: normal;
+  font-size: 18px;
+  font-size: 1.18571429rem;
+  line-height: 2.546153846;
+  color: #757575;
+  float: left;
+}
+
+body {
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519917822425&di=588e6805714d43b991fb54c928fad76e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F53bb63533c313.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+}

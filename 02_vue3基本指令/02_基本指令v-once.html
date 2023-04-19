@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <template id="my-app">
+      <!--
+          1、当数据发生变化时候，元素或组件以及所有的子元素将视为静态内容并且跳过
+          2、该指令可以用于性能优化
+
+       -->
+      <div v-once>{{counter}}</div>
+      <div>{{counter}}</div>
+      <button @click="increment">+1</button>
+    </template>
+
+    <script src="../vue3源码//vue3.js"></script>
+
+    <script>
+      const App = {
+        template: "#my-app",
+        data() {
+          return {
+            counter: 1,
+          };
+        },
+        methods: {
+          increment() {
+            this.counter++;
+          },
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
